@@ -9,7 +9,7 @@ select * from view_sala
 
 /* CAU VIEW 2: Tạo view  có tên View_oldLuong hiện những người đủ điều kiện tăng lương  nhân viên (
 1.Nhân viên có năm làm việc > 20 năm lương tăng 5%; 
-2.có năm làm việc > 25 năm lương tăng 10%
+2.có năm làm việc > 25 năm lương tăng 10% 
 3. có năm làm việc > 30 năm lương tăng 20%; */
 CREATE VIEW View_oldLuong AS
 SELECT employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, manager_id, department_id,
@@ -23,8 +23,7 @@ FROM employees;
 
  select * from View_oldLuong
  /*
- CAU pROCEDURE 1:Tạo một thủ tục hàm lưu trữ để thông thủ tục này có thể bổ sung thêm một ghi mới cho bảng Employees
- (thủ tục phải thực hiện kiểm ta tính hợp lệ của dữ liệu cần bổ sung. không trùng khóa chính và đảm bản toàn vẹn tham chiếu
+ CAU pROCEDURE 1:Search_Name
  */
  DELIMITER $$
 CREATE PROCEDURE Search_Name (IN name VARCHAR (50))
