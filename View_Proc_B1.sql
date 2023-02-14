@@ -1,3 +1,4 @@
+use nhansu;
 CREATE VIEW viewDemo
 AS
  SELECT e.employee_id, first_name +" " + last_name AS FullName, 
